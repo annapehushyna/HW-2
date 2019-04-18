@@ -1,0 +1,88 @@
+h1{
+    color: rgb(63, 153, 123);
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+ul>li:first-child>a{
+    color: green;
+}
+ul>li:nth-child(even)>a{
+    font-size: 16px;
+}
+ul>li:nth-child(odd)>a{
+    font-size: 10px;
+}
+ul>li:nth-child(3n+1){
+    background-color: yellow;
+    display: inline-block;
+}
+
+ul>li>a:link{
+    text-decoration-line: none;
+}
+ul>li>a:visited{
+       text-decoration-line: none;
+}
+ul>li:hover{
+    background-color: rgba(40, 211, 211, 0.2);
+    text-decoration-line: underline;
+}
+
+ul>li>a:active{
+    color: aqua;
+    text-decoration-line: underline;
+}
+ul>li::before{
+    content: "-"; display: inline-block;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 54px 54px 54px;
+    grid-gap: 5px;
+}
+.rectangle{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: black;  
+}
+.rectangle:hover{
+    cursor: pointer;
+    background-color: yellow;
+    border-color: blue;
+}
+.rectangle:hover .circle{
+    background-color: blue;
+}
+.psevdo{
+    text-decoration: none;
+}
+.psevdo::before{
+    content: "google.com";
+}
+.psevdo::after{
+    content: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjio3hZ8kkwKn7FBB6IJh7ha65UgVkZDiYTg9GbSjygMJhYbK-ZA);
+    margin-left: 10px;
+}
+.bg-box {
+    width: 80%;
+    height: 600px;
+    background-image: url(./images/house.jpg), url(./images/grass.png), url(./images/lamp.png), url(./images//hedgehog.png), url(./images/donut.png);
+    background-position: center, bottom, top, left, right;
+    background-repeat: no-repeat, repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: auto 50%, auto 30%, auto 10%, 5% auto, 5% auto;
+    background-color: #2a700a;
+
+}
